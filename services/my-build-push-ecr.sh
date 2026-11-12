@@ -29,7 +29,7 @@ for SERVICE in "${SERVICES[@]}"; do
   docker tag ecommerce-dev/$SERVICE:latest $ECR_REGISTRY/ecommerce-dev/$SERVICE_PUSH:latest
 
   echo "==> Pushing $SERVICE..."
-  docker push $ECR_REGISTRY/ecommerce-dev/$SERVICE:latest
+  docker push $ECR_REGISTRY/ecommerce-dev/$SERVICE_PUSH:latest
 done
 
 echo ""
