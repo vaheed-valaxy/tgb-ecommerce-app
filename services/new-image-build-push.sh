@@ -51,9 +51,10 @@ for SERVICE in "${SERVICES[@]}"; do
 
     aws ecr create-repository \
       --repository-name "$ECR_REPOSITORY" \
-      --region "$REGION" \
-      --image-scanning-configuration scanOnPush=true \
-      --image-tag-mutability IMMUTABLE
+      --region "$REGION" 
+      
+      # --image-scanning-configuration scanOnPush=true \
+      # --image-tag-mutability IMMUTABLE
 
     echo "Repository created successfully: $ECR_REPOSITORY"
 
